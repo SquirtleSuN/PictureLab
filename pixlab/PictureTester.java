@@ -13,8 +13,8 @@ public class PictureTester
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
-    beach.zeroBlue();
-    beach.explore();
+    //beach.zeroBlue();
+    //beach.explore();
   }
   
   /** Method to test mirrorVertical */
