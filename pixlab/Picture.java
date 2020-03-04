@@ -179,6 +179,36 @@ public class Picture extends SimplePicture
   
   public void mirrorHorizontal()
   {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel botPixel = null;
+    int width = pixels.length;
+    for (int row = 0; row < width/2; row++)
+    {
+      for (int col = 0; col < pixels[0].length; col++)
+      {
+        topPixel = pixels[row][col];
+        botPixel = pixels[width-1-row][col];
+        botPixel.setColor(topPixel.getColor());
+      }
+    } 
+  }
+  
+  public void mirrorHorizontalBT()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel botPixel = null;
+    int width = pixels.length;
+    for (int row = 0; row < width/2; row++)
+    {
+      for (int col = 0; col < pixels[0].length; col++)
+      {
+        topPixel = pixels[row][col];
+        botPixel = pixels[width-1-row][col];
+        topPixel.setColor(botPixel.getColor());
+      }
+    } 
   }
   
   /** Mirror just part of a picture of a temple */
