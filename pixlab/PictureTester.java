@@ -91,6 +91,7 @@ public class PictureTester
     temple.explore();
   }
   
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
