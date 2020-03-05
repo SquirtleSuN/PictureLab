@@ -249,7 +249,16 @@ public class Picture extends SimplePicture
           for(int col=100; col<170; col++)
           {
               arm = pixels[row][col];
-              copy = pixels[row+30][col+3];
+              copy = pixels[row+65][col-7];
+              copy.setColor(arm.getColor());
+          }
+      }
+      for(int row=170; row<196; row++)
+      {
+          for(int col=239; col<294; col++)
+          {
+              arm = pixels[row][col];
+              copy = pixels[row+65][col+7];
               copy.setColor(arm.getColor());
           }
       }
